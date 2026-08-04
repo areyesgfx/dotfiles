@@ -1,0 +1,11 @@
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[user]
+	name = Antonio Reyes
+	email = 48196820+areyesgfx@users.noreply.github.com
+[credential]
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
