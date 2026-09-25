@@ -5,9 +5,9 @@ Symlinked into place by `install.sh`, so edits to files in `~` after setup are e
 
 ## Setup
 
+From the repo root:
+
 ```
-git clone <this-repo> ~/code/personal/dotfiles
-cd ~/code/personal/dotfiles
 ./install.sh
 ```
 
