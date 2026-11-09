@@ -23,13 +23,13 @@ Anything it would overwrite gets moved to `~/.dotfiles_backup/<timestamp>/` firs
 | `git/.gitconfig` | `~/.gitconfig` | Git identity, LFS, credential helper |
 | `p10k/.p10k.zsh` | `~/.p10k.zsh` | Powerlevel10k prompt config |
 | `oh-my-zsh/aliases.zsh` | `~/.oh-my-zsh/custom/aliases.zsh` | Custom shell aliases |
-| `nvim/` | `~/.config/nvim` | Neovim config (lazy.nvim, Harpoon, Telescope, treesitter) |
+| `nvim/` | `~/.config/nvim` | Neovim config (LazyVim + neo-tree, mirrored from Omarchy) |
 | `claude/settings.json` | `~/.claude/settings.json` | Claude Code settings (default model, enabled plugins) |
 | `agent/AGENTS.md`, `agent/OPINIONS.md`, `agent/VOICE.md` | `~/AGENTS.md`, `~/OPINIONS.md`, `~/VOICE.md` | Agent harness instructions - not Claude-specific (`~/.claude/CLAUDE.md` links to `~/AGENTS.md`) |
 
 `.claude/settings.local.json` in this repo is unrelated to any of the above - it's harness-managed session state (Bash permission approvals) auto-written by Claude Code while working in this project, not a dotfile. It's gitignored globally and shouldn't be committed.
 
-Neovim plugins are managed by [lazy.nvim](https://github.com/folke/lazy.nvim), which bootstraps itself on first launch and locks versions in `nvim/lazy-lock.json`.
+Neovim runs [LazyVim](https://www.lazyvim.org) (lazy.nvim bootstraps itself on first launch and locks versions in `nvim/lazy-lock.json`). The config mirrors Omarchy's. `lua/plugins/theme.lua` is gitignored because Omarchy symlinks it to the active theme. Without it (e.g. on macOS), LazyVim falls back to tokyonight.
 
 ## Manual steps not covered here
 
